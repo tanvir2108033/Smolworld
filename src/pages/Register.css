@@ -1,0 +1,55 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eee7db;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #004d4d;
+}
+
+.form-control {
+  border: 1px solid #004d4d;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-control:focus {
+  border-color: #004d4d;
+  box-shadow: 0 0 0 0.2rem rgba(0, 77, 77, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #004d4d;
+  border-color: #004d4d;
+}
+
+.btn-primary {
+  background-color: #004d4d;
+  border-color: #004d4d;
+  padding: 10px 30px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #003333;
+  border-color: #003333;
+}
+
+.text-primary {
+  color: #004d4d !important;
+}
+
+.form-check-inline {
+  margin-right: 1rem;
+}
+
+.form-check-label {
+  color: #666;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+} 

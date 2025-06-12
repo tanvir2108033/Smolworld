@@ -1,0 +1,353 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eee7db;
+  margin: 0;
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#navi-leter{
+  margin: 0 0.25rem;
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.nav-link {
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(20, 255, 179, 0.1); 
+  border-radius: 0.5rem;
+}
+
+.title h1:hover{
+  color:transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease; 
+}
+
+.card img.hover-effect {
+  transform: scale(1.1); 
+}
+
+.hover-effect {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  pointer-events: none;
+}
+
+.content * {
+  pointer-events: auto;
+}
+
+.title h1 {
+  font-size: 5rem;
+  font-family: 'Paytone One', sans-serif;
+  font-weight: 600;
+}
+
+.title p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.btn-register {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+}
+
+#scroll {
+  /* display: flex; */
+  padding: 2rem 1rem;
+  background-color: #8ee78d;
+  margin: 3rem 0; 
+  border-top: 4px solid #004d4d;
+  border-bottom: 4px solid #004d4d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logos-scroller-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.logos-scroller-track {
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.logos-scroller-list {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  padding: 0;
+}
+
+.logos-scroller-list li img {
+  height: 40px;
+  width: auto;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.benefits-section, .benefits {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  margin: 2rem 0;
+}
+
+.benefit-box {
+  margin-bottom: 3rem;
+}
+
+.benefit-box img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #154a4a;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.social a {
+  color: #fff;
+  background: transparent;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  font-size: 1.8rem;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.social a i {
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.social a:hover {
+  transform: scale(1.2);
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.social a:hover i {
+  color: #004d4d;
+}
+
+/* Existing benefit and destination card styles for consistency */
+.benefit-image-container {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+}
+
+.benefit-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: 
+    transform 0.4s cubic-bezier(.4,2,.3,1),
+    filter 0.3s,
+    box-shadow 0.3s;
+  z-index: 1;
+}
+
+.benefit-card:hover .benefit-image {
+  transform: scale(1.06) rotate(-1deg);
+  filter: brightness(1.08) saturate(1.15);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+}
+
+.benefit-image-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.10) 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+  border-radius: 18px;
+}
+
+.benefit-card:hover .benefit-image-overlay {
+  opacity: 1;
+}
+
+.benefit-content {
+  padding: 1.5rem;
+}
+
+.benefit-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.benefit-content p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.destination-card {
+  /* background: #fff; */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover .destination-image {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.destination-image-container {
+  width: 100%;
+  position: relative;
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+}
+
+.destination-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* background-color: #f8f9fa; */
+}
+
+
+.destination-content {
+  padding: 1.5rem;
+}
+
+.destination-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.destination-content p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .benefits, .benefits-section {
+    padding: 1.5rem 0.5rem;
+    border-radius: 8px;
+  }
+  .benefit-content, .destination-content {
+    padding: 1rem;
+  }
+  .benefit-content h3, .destination-content h3 {
+    font-size: 1.25rem;
+  }
+}
+
+.featured-destinations {
+  /* background: #fff; */
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  margin: 2rem 0;
+  /* padding: 0; */
+}
+
+@media (max-width: 768px) {
+  .featured-destinations {
+    border-radius: 8px;
+    padding: 0;
+  }
+}
+
+.logo-img {
+  margin-left: 0.5in;
+  margin-right: 0.5in;
+} 
