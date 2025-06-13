@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       <section id="scroll">
         <Container className="text-center py-4">
           <p style={{ fontSize: 'x-large' }}>As seen in</p>
-          <div className="logos-scroller-track d-flex flex-wrap justify-content-center gap-3">
+          <div className="logos-scroller-track d-flex flex-wrap justify-content-center" style={{ gap: '0.5in' }}>
             {[...logos, ...logos].map((src, index) => (
               <img key={index} src={src} alt={`Logo ${index % logos.length}`} height={40} className="logo-img" />
             ))}
@@ -45,110 +45,55 @@ const Home: React.FC = () => {
         </Container>
       </section>
 
-      <section className="benefits py-5">
-        <Container>
-          <Row className="align-items-center mb-5">
-            <Col md={6} className="order-md-2">
-              <div className="benefit-image-container">
-                <img src={vipImage} alt="VIP Experience" className="benefit-image" />
-                <div className="benefit-image-overlay"></div>
-              </div>
-            </Col>
-            <Col md={6} className="order-md-1">
-              <div className="benefit-content">
-                <h3>Travel in style, with exclusive VIP benefits</h3>
-                <p>Indulge in luxury with our curated collection of the world's best hotels and enjoy exclusive VIP benefits, all at no extra cost.</p>
-              </div>
-            </Col>
-          </Row>
-          <Row className="align-items-center mb-5">
-            <Col md={6} className="order-md-1">
-              <div className="benefit-image-container">
-                <img src={newJourneyImage} alt="New Journey" className="benefit-image" />
-                <div className="benefit-image-overlay"></div>
-              </div>
-            </Col>
-            <Col md={6} className="order-md-2">
-              <div className="benefit-content">
-                <h3>Discover new inspiration for your next journey</h3>
-                <p>Whether it's beautiful destinations or thrilling experiences, ignite your wanderlust and discover new reasons to travel and explore.</p>
-              </div>
-            </Col>
-          </Row>
-          <Row className="align-items-center mb-5">
-            <Col md={6} className="order-md-2">
-              <div className="benefit-image-container">
-                <img src={communityImage} alt="Community" className="benefit-image" />
-                <div className="benefit-image-overlay"></div>
-              </div>
-            </Col>
-            <Col md={6} className="order-md-1">
-              <div className="benefit-content">
-                <h3>Belong to a community with a shared passion</h3>
-                <p>Connect with other members online or at our events and forge lasting friendships that transcend borders.</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
+      <section className="benefits-section container">
+        <Row className="align-items-center benefit-box">
+          <Col md={6}>
+            <h3>Travel in style, with exclusive VIP benefits</h3>
+            <p>Indulge in luxury with our curated collection of the world's best hotels and enjoy exclusive VIP benefits, all at no extra cost.</p>
+          </Col>
+          <Col md={6} id="over">
+            <img src={vipImage} alt="VIP Travel" className="img-fluid" />
+          </Col>
+        </Row>
+        <Row className="align-items-center benefit-box flex-md-row-reverse">
+          <Col md={6}>
+            <h3>Discover new inspiration for your next journey</h3>
+            <p>Whether it's beautiful destinations or thrilling experiences, ignite your wanderlust and discover new reasons to travel and explore.</p>
+          </Col>
+          <Col md={6} id="over">
+            <img src={newJourneyImage} alt="New Journey" className="img-fluid" />
+          </Col>
+        </Row>
+        <Row className="align-items-center benefit-box">
+          <Col md={6}>
+            <h3>Belong to a community with a shared passion</h3>
+            <p>Connect with other members online or at our events and forge lasting friendships that transcend borders.</p>
+          </Col>
+          <Col md={6} id="over">
+            <img src={communityImage} alt="Community" className="img-fluid" />
+          </Col>
+        </Row>
       </section>
 
-      <section className="featured-destinations py-5">
-        <Container>
-          <h2 className="text-center mb-4">Featured Destinations</h2>
-          <Row className="g-4">
-            <Col md={4}>
-              <Link to="/destination/paris" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="destination-card">
-                  <div className="destination-image-container">
-                    <img 
-                      src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800" 
-                      alt="Paris" 
-                      className="destination-image" 
-                    />
-                  </div>
-                  <div className="destination-content">
-                    <h3>Paris</h3>
-                    <p>Experience the romance of the City of Light</p>
-                  </div>
-                </div>
-              </Link>
-            </Col>
-            <Col md={4}>
-              <Link to="/destination/tokyo" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="destination-card">
-                  <div className="destination-image-container">
-                    <img 
-                      src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800" 
-                      alt="Tokyo" 
-                      className="destination-image" 
-                    />
-                  </div>
-                  <div className="destination-content">
-                    <h3>Tokyo</h3>
-                    <p>Discover the perfect blend of tradition and innovation</p>
-                  </div>
-                </div>
-              </Link>
-            </Col>
-            <Col md={4}>
-              <Link to="/destination/bali" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="destination-card">
-                  <div className="destination-image-container">
-                    <img 
-                      src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" 
-                      alt="Bali" 
-                      className="destination-image" 
-                    />
-                  </div>
-                  <div className="destination-content">
-                    <h3>Bali</h3>
-                    <p>Immerse yourself in paradise</p>
-                  </div>
-                </div>
-              </Link>
-            </Col>
-          </Row>
-        </Container>
+      <section className="featured-destinations container my-5">
+        <h2 className="text-center mb-4">Featured Destinations</h2>
+        <Row>
+          <Col md={4}>
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800" alt="Paris" className="img-fluid rounded" />
+            <h5 className="mt-2">Paris, France</h5>
+            <p>The city of lights awaits you with romantic streets and timeless landmarks.</p>
+          </Col>
+          <Col md={4}>
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800" alt="Tokyo" className="img-fluid rounded" />
+            <h5 className="mt-2">Tokyo, Japan</h5>
+            <p>Experience vibrant culture and cutting-edge technology in this bustling metropolis.</p>
+          </Col>
+          <Col md={4}>
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" alt="Bali" className="img-fluid rounded" />
+            <h5 className="mt-2">Bali, Indonesia</h5>
+            <p>Relax on stunning beaches or explore spiritual temples in tropical paradise.</p>
+          </Col>
+        </Row>
       </section>
 
       <section className="testimonials bg-light py-5">
@@ -182,39 +127,25 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="blog-section py-5">
-        <Container>
-          <h2 className="text-center mb-4">Latest Blog Posts</h2>
-          <Row className="g-4">
-            <Col md={4}>
-              <div className="blog-card">
-                <img src={blog1} alt="Blog 1" className="img-fluid rounded" />
-                <h4 className="mt-3">
-                  <Link to="/blog/1" style={{ textDecoration: 'none', color: 'inherit' }}>Latest from Our Blog</Link>
-                </h4>
-                <p>Sun, sand, and serenity—discover the best coastal getaways this year.</p>
-              </div>
-            </Col>
-            <Col md={4}>
-              <div className="blog-card">
-                <img src={blog2} alt="Blog 2" className="img-fluid rounded" />
-                <h4 className="mt-3">
-                  <Link to="/blog/2" style={{ textDecoration: 'none', color: 'inherit' }}>Top 5 Beaches to Visit in 2025</Link>
-                </h4>
-                <p>Travel smarter, lighter, and stress-free with these essential tips.</p>
-              </div>
-            </Col>
-            <Col md={4}>
-              <div className="blog-card">
-                <img src={blog3} alt="Blog 3" className="img-fluid rounded" />
-                <h4 className="mt-3">
-                  <Link to="/blog/3" style={{ textDecoration: 'none', color: 'inherit' }}>Packing Tips for Light Travelers</Link>
-                </h4>
-                <p>Off-the-beaten-path locations that will leave you in awe.</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
+      <section className="blog-section container my-5">
+        <h2 className="text-center mb-4">Latest from Our Blog</h2>
+        <Row>
+          <Col md={4}>
+            <img src={blog1} alt="Blog 1" className="img-fluid rounded" />
+            <h5 className="mt-2">Top 5 Beaches to Visit in 2025</h5>
+            <p>Sun, sand, and serenity—discover the best coastal getaways this year.</p>
+          </Col>
+          <Col md={4}>
+            <img src={blog2} alt="Blog 2" className="img-fluid rounded" />
+            <h5 className="mt-2">Packing Tips for Light Travelers</h5>
+            <p>Travel smarter, lighter, and stress-free with these essential tips.</p>
+          </Col>
+          <Col md={4}>
+            <img src={blog3} alt="Blog 3" className="img-fluid rounded" />
+            <h5 className="mt-2">Hidden Gems of Southeast Asia</h5>
+            <p>Off-the-beaten-path locations that will leave you in awe.</p>
+          </Col>
+        </Row>
       </section>
 
       <section className="newsletter-signup bg-dark text-white py-5">
@@ -249,7 +180,6 @@ const Home: React.FC = () => {
           </Accordion.Item>
         </Accordion>
       </section>
-
     </div>
   );
 };

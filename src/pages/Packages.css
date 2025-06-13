@@ -1,6 +1,7 @@
 .packages-page {
   padding: 60px 0;
   background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
 }
 
 .page-header {
@@ -8,6 +9,17 @@
   background-color: #fff;
   margin-bottom: 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+  font-family: 'Paytone One', sans-serif;
+  color: #ffffff;
+}
+
+.page-header h1:hover{
+  color:transparent;
+  -webkit-text-stroke: 1px white;
+  
 }
 
 .package-card {
@@ -19,6 +31,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
 }
 
 .package-card:hover {
@@ -46,12 +61,15 @@
 .package-card .card-body {
   padding: 2rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .package-card h2 {
-  color: #2c3e50;
+  color: #004d4d;
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  font-family: 'Paytone One', sans-serif;
 }
 
 .price {
@@ -62,12 +80,13 @@
   font-size: 1.5rem;
   vertical-align: top;
   margin-right: 2px;
+  color: #004d4d;
 }
 
 .amount {
   font-size: 3rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: #004d4d;
 }
 
 .period {
@@ -79,6 +98,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  flex: 1;
 }
 
 .feature-list li {
@@ -86,6 +106,7 @@
   border-bottom: 1px solid #eee;
   display: flex;
   align-items: center;
+  font-size: 0.95rem;
 }
 
 .feature-list li:last-child {
@@ -99,10 +120,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .included {
-  color: #2c3e50;
+  color: #004d4d;
 }
 
 .not-included {
@@ -121,14 +143,41 @@
   padding: 12px 30px;
   font-weight: 600;
   border-radius: 25px;
-  background-color: #007bff;
+  background-color: #004d4d;
   border: none;
   transition: all 0.3s ease;
+  width: 100%;
+  margin-top: auto;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #003333;
   transform: translateY(-2px);
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  padding: 40px 0;
+}
+
+.accordion-item {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.accordion-button {
+  font-weight: 600;
+  color: #004d4d;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e6f3f3;
+  color: #004d4d;
+}
+
+.accordion-body {
+  color: #666;
 }
 
 /* Responsive styles */
@@ -212,6 +261,13 @@
     padding: 10px 25px;
     font-size: 0.95rem;
   }
+
+  .recommended-badge {
+    font-size: 0.7rem;
+    padding: 4px 35px;
+    top: 15px;
+    right: -40px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -271,6 +327,8 @@
   .recommended-badge {
     font-size: 0.7rem;
     padding: 4px 35px;
+    top: 12px;
+    right: -45px;
   }
 }
 
@@ -279,7 +337,7 @@
   margin: 0 -0.5rem;
 }
 
-.col-lg-3, .col-md-6 {
+.col-lg-3, .col-md-6, .col-sm-12 {
   padding: 0 0.5rem;
 }
 
@@ -288,7 +346,39 @@
     margin: 0 -0.25rem;
   }
 
-  .col-lg-3, .col-md-6 {
+  .col-lg-3, .col-md-6, .col-sm-12 {
     padding: 0 0.25rem;
+  }
+}
+
+/* Fix for card heights in mobile view */
+@media (max-width: 768px) {
+  .package-card {
+    height: auto;
+    min-height: 100%;
+  }
+
+  .package-card .card-body {
+    height: auto;
+  }
+
+  .feature-list {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Improve spacing between cards */
+@media (max-width: 992px) {
+  .row.g-4 {
+    --bs-gutter-y: 1.5rem;
+  }
+}
+
+/* Fix for recommended badge on smaller screens */
+@media (max-width: 576px) {
+  .recommended-badge {
+    transform: rotate(45deg) scale(0.8);
+    top: 10px;
+    right: -50px;
   }
 } 
