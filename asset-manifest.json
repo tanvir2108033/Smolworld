@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Smolworld/static/css/main.905fd7e1.css",
-    "main.js": "/Smolworld/static/js/main.6e809bd1.js",
+    "main.css": "/Smolworld/static/css/main.15dbf576.css",
+    "main.js": "/Smolworld/static/js/main.6e5e1a52.js",
     "static/js/453.1bb970eb.chunk.js": "/Smolworld/static/js/453.1bb970eb.chunk.js",
     "static/media/blog_post_1.png": "/Smolworld/static/media/blog_post_1.8289fc0efc8729d0a2a8.png",
     "static/media/Myvide_home.mp4": "/Smolworld/static/media/Myvide_home.6e19f1cc7e3d10ec4df2.mp4",
@@ -44,12 +44,12 @@
     "static/media/hotel1.jpeg": "/Smolworld/static/media/hotel1.830823f10776bcfa7d2e.jpeg",
     "static/media/Packing_3.jpeg": "/Smolworld/static/media/Packing_3.3425c9fc5ddd4504c96f.jpeg",
     "index.html": "/Smolworld/index.html",
-    "main.905fd7e1.css.map": "/Smolworld/static/css/main.905fd7e1.css.map",
-    "main.6e809bd1.js.map": "/Smolworld/static/js/main.6e809bd1.js.map",
+    "main.15dbf576.css.map": "/Smolworld/static/css/main.15dbf576.css.map",
+    "main.6e5e1a52.js.map": "/Smolworld/static/js/main.6e5e1a52.js.map",
     "453.1bb970eb.chunk.js.map": "/Smolworld/static/js/453.1bb970eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.905fd7e1.css",
-    "static/js/main.6e809bd1.js"
+    "static/css/main.15dbf576.css",
+    "static/js/main.6e5e1a52.js"
   ]
 }
