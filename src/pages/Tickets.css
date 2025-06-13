@@ -21,15 +21,22 @@
   border: none;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-top {
   height: 200px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
 }
 
 .card-body {
@@ -40,17 +47,20 @@
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
+  color: #333;
 }
 
 .card-text {
   color: #666;
   font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .form-control {
   border-radius: 25px;
   padding: 0.75rem 1.5rem;
   border: 2px solid #e9ecef;
+  font-size: 1rem;
 }
 
 .form-control:focus {
@@ -62,9 +72,141 @@
   border-radius: 25px;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-outline-primary:hover {
   background-color: #0d6efd;
   color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .page-header {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 60px 0;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem;
+  }
+
+  .btn-outline-primary {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header {
+    padding: 40px 0;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .form-control {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-outline-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Grid responsiveness */
+.row {
+  margin: 0 -0.5rem;
+}
+
+.col-md-4 {
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .row {
+    margin: 0 -0.25rem;
+  }
+
+  .col-md-4 {
+    padding: 0 0.25rem;
+  }
+}
+
+/* Search form responsiveness */
+@media (max-width: 576px) {
+  .form-control,
+  .btn-outline-primary {
+    border-radius: 20px;
+  }
+
+  .btn-outline-primary {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
 } 

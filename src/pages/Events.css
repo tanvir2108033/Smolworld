@@ -7,34 +7,49 @@
 }
 
 .card {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: none;
   border-radius: 10px;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-top {
   height: 220px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
 }
 
 .card-body {
   padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
+  color: #2c3e50;
 }
 
 .card-text {
   color: #666;
   font-size: 0.9rem;
+  line-height: 1.5;
+  flex: 1;
 }
 
 .discount-section {
@@ -55,4 +70,141 @@
   border-radius: 5px;
   font-size: 0.9rem;
   z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .page-header {
+    padding: 80px 0;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .page-header {
+    padding: 60px 0;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+
+  .discount-section {
+    padding: 30px 0;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 50px 0;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .discount-section {
+    padding: 25px 0;
+    margin-top: 30px;
+  }
+
+  .discount-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .discount-tag {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header {
+    padding: 40px 0;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .discount-section {
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+
+  .discount-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .discount-tag {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+}
+
+/* Grid responsiveness */
+.row {
+  margin: 0 -0.5rem;
+}
+
+.col-md-4 {
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .row {
+    margin: 0 -0.25rem;
+  }
+
+  .col-md-4 {
+    padding: 0 0.25rem;
+  }
 } 

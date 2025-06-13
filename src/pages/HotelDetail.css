@@ -173,9 +173,30 @@ body {
 }
 
 /* Responsive adjustments */
+@media (max-width: 992px) {
+  .hotel-detail {
+    padding: 1.5rem;
+  }
+
+  .hotel-header h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .amenities-list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .hotel-detail {
     padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   
   .booking-card {
@@ -185,5 +206,112 @@ body {
   
   .amenities-list {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .hotel-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .location {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  .booking-card h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hotel-detail {
+    padding: 0.75rem;
+  }
+
+  .hotel-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .location {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .amenities-list {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .amenities-list li {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .booking-card {
+    padding: 1rem;
+  }
+
+  .booking-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Image gallery responsiveness */
+.hotel-images .row {
+  margin: 0 -0.5rem;
+}
+
+.hotel-images .col {
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .hotel-images .col {
+    padding: 0 0.25rem;
+  }
+
+  .hotel-image {
+    height: 150px !important;
+  }
+}
+
+/* Improve button responsiveness */
+.btn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Improve sticky booking card behavior */
+@media (min-width: 769px) {
+  .booking-card {
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
   }
 }

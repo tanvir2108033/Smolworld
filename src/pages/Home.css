@@ -1,6 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #eee7db;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
   margin: 0;
 }
 
@@ -348,6 +349,186 @@ body {
 }
 
 .logo-img {
-  margin-left: 0.5in;
-  margin-right: 0.5in;
+  margin-left: 0;
+  margin-right: 0;
+  height: 40px;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .title h1 {
+    font-size: 4rem;
+  }
+  
+  .title p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .title h1 {
+    font-size: 3.5rem;
+  }
+  
+  .benefit-content, .destination-content {
+    padding: 1.5rem;
+  }
+  
+  .benefit-content h3, .destination-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+  
+  .title p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .btn-register {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .benefits, .benefits-section {
+    padding: 2rem 1rem;
+  }
+  
+  .benefit-content, .destination-content {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .benefit-content h3, .destination-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .benefit-content p, .destination-content p {
+    font-size: 0.9rem;
+  }
+  
+  .featured-destinations {
+    padding: 2rem 1rem;
+  }
+  
+  .blog-card {
+    margin-bottom: 2rem;
+  }
+  
+  .newsletter-signup form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .newsletter-signup .col-md-6,
+  .newsletter-signup .col-md-2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .title p {
+    font-size: 0.9rem;
+  }
+  
+  .benefit-image-container,
+  .destination-image-container {
+    margin-bottom: 1rem;
+  }
+  
+  .logos-scroller-track {
+    flex-wrap: wrap;
+    gap: 0.5rem !important;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+  }
+  
+  .logo-img {
+    height: 24px !important;
+    margin: 0 0.25rem;
+  }
+  
+  .testimonials .blockquote {
+    font-size: 0.9rem;
+  }
+  
+  .faq-section {
+    padding: 1rem;
+  }
+}
+
+/* Additional responsive utilities */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center-sm {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text-center-sm {
+    text-align: left;
+  }
+}
+
+/* Improve card responsiveness */
+.destination-card,
+.blog-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-content,
+.blog-card {
+  flex: 1;
+}
+
+/* Improve form responsiveness */
+.form-control {
+  width: 100%;
+}
+
+/* Improve carousel responsiveness */
+.carousel-item {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Improve map responsiveness */
+.map-section {
+  padding: 1rem;
+}
+
+.ratio-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.ratio-16x9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 } 

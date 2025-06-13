@@ -15,6 +15,7 @@
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
 }
 
 .profile-avatar {
@@ -24,6 +25,11 @@
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #004d4d;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
 }
 
 .profile-avatar img {
@@ -36,10 +42,17 @@
   color: #333;
   border-radius: 5px;
   margin-bottom: 5px;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(0, 77, 77, 0.1);
 }
 
 .nav-pills .nav-link.active {
   background-color: #004d4d;
+  color: white;
 }
 
 .profile-content {
@@ -53,25 +66,38 @@
   height: 120px;
   object-fit: cover;
   border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.booking-image:hover {
+  transform: scale(1.05);
 }
 
 .wishlist-item {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .wishlist-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .wishlist-item img {
   height: 200px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.wishlist-item:hover img {
+  transform: scale(1.05);
 }
 
 .form-control {
   border: 2px solid #e9ecef;
   border-radius: 8px;
   padding: 0.75rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-control:focus {
@@ -82,19 +108,152 @@
 .btn-primary {
   background-color: #004d4d;
   border-color: #004d4d;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: #003333;
   border-color: #003333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline-primary {
   color: #004d4d;
   border-color: #004d4d;
+  transition: all 0.3s ease;
 }
 
 .btn-outline-primary:hover {
   background-color: #004d4d;
   border-color: #004d4d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .page-header {
+    padding: 50px 0;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .page-header {
+    padding: 40px 0;
+  }
+
+  .page-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .page-header p {
+    font-size: 1.1rem;
+  }
+
+  .profile-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .nav-pills .nav-link {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 35px 0;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-pills .nav-link {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .booking-image {
+    height: 100px;
+  }
+
+  .wishlist-item img {
+    height: 180px;
+  }
+
+  .form-control {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header {
+    padding: 30px 0;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+  }
+
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nav-pills .nav-link {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .booking-image {
+    height: 80px;
+  }
+
+  .wishlist-item img {
+    height: 160px;
+  }
+
+  .form-control {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
 } 
