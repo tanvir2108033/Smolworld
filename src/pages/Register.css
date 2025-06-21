@@ -1,0 +1,126 @@
+.register-page {
+  background-color: #eee7db;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.register-page .card {
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.register-page .card-body {
+  border-radius: 15px;
+}
+
+.register-page h2 {
+  color: #004d4d;
+  font-weight: 700;
+}
+
+.register-page .form-label {
+  font-weight: 600;
+  color: #004d4d;
+  margin-bottom: 0.5rem;
+}
+
+.register-page .form-control {
+  border-radius: 8px;
+  border: 2px solid #eee7db;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.register-page .form-control:focus {
+  border-color: #004d4d;
+  box-shadow: 0 0 0 0.2rem rgba(0, 77, 77, 0.25);
+}
+
+.register-page .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.register-page .btn-primary {
+  background-color: #004d4d;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.register-page .btn-primary:hover {
+  background-color: #003333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 77, 77, 0.3);
+}
+
+.register-page .btn-primary:disabled {
+  background: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+.register-page .form-check-input:checked {
+  background-color: #004d4d;
+  border-color: #004d4d;
+}
+
+.register-page .form-check-input:focus {
+  border-color: #004d4d;
+  box-shadow: 0 0 0 0.2rem rgba(0, 77, 77, 0.25);
+}
+
+.register-page a {
+  color: #004d4d;
+  font-weight: 600;
+}
+
+.register-page a:hover {
+  color: #003333;
+}
+
+.success-icon {
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .register-page {
+    padding: 1rem 0;
+  }
+  
+  .register-page .card-body {
+    padding: 2rem !important;
+  }
+}
+
+/* Loading spinner animation */
+.spinner-border {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 

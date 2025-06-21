@@ -1,0 +1,156 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eee7db;
+  margin: 0;
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.title h1 {
+  font-size: 4rem;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.title h1:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+
+.title p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.btn-register {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+}
+
+#scroll {
+  padding: 2rem 1rem;
+  background-color: #8ee78d;
+  margin: 3rem 0;
+  border-top: 4px solid #004d4d;
+  border-bottom: 4px solid #004d4d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logos-scroller-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.logos-scroller-track {
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.logos-scroller-list {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  padding: 0;
+}
+
+.logos-scroller-list li img {
+  height: 40px;
+  width: auto;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.benefits-section {
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.benefit-box {
+  margin-bottom: 3rem;
+}
+
+.benefit-box img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-box img.hover-effect {
+  transform: scale(1.05);
+}
+
+/* Featured Destinations & Blog Cards */
+.destination-card:hover,
+.blog-card:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+/* Button hover effect */
+.btn-outline-primary:hover,
+.btn-outline-success:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.15);
+  transition: all 0.2s;
+}
+
+/* Testimonial card animation */
+.testimonial-card {
+  animation: fadeInUp 0.7s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
