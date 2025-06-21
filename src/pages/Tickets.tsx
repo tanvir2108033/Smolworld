@@ -15,7 +15,7 @@ const Tickets: React.FC = () => {
     {
       id: 1,
       name: 'Air Travel',
-      image: ticket1,
+      image: ticket1, 
       description: 'Book your flight tickets with our trusted airline partners'
     },
     {
