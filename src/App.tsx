@@ -19,7 +19,7 @@ import Tickets from './pages/Tickets';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Smolworld">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
