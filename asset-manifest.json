@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Smolworld/static/css/main.b4f091cd.css",
-    "main.js": "/Smolworld/static/js/main.5c8edbaf.js",
+    "main.js": "/Smolworld/static/js/main.b956b032.js",
     "static/js/453.1547b111.chunk.js": "/Smolworld/static/js/453.1547b111.chunk.js",
     "static/media/Myvide_home.mp4": "/Smolworld/static/media/Myvide_home.6e19f1cc7e3d10ec4df2.mp4",
     "static/media/winter-fest.jpg": "/Smolworld/static/media/winter-fest.3dbed33748ec50f9fb8e.jpg",
@@ -34,11 +34,11 @@
     "static/media/hotel1.jpeg": "/Smolworld/static/media/hotel1.830823f10776bcfa7d2e.jpeg",
     "index.html": "/Smolworld/index.html",
     "main.b4f091cd.css.map": "/Smolworld/static/css/main.b4f091cd.css.map",
-    "main.5c8edbaf.js.map": "/Smolworld/static/js/main.5c8edbaf.js.map",
+    "main.b956b032.js.map": "/Smolworld/static/js/main.b956b032.js.map",
     "453.1547b111.chunk.js.map": "/Smolworld/static/js/453.1547b111.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b4f091cd.css",
-    "static/js/main.5c8edbaf.js"
+    "static/js/main.b956b032.js"
   ]
 }
